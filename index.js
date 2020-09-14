@@ -10,17 +10,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/user/',auth);
 
 
-app.get('/',(req, res)=>{
-
-    res.send('WELCOME TO HOME PAGE')
-})
-
 
 app.get('/home',verificationToken,(req, res)=>{
 
     res.send('Home Page open')
 })
 
-app.listen(PORT,()=>{
+app.listen(4000,()=>{
     console.log('Local connection established')
 })
